@@ -9,35 +9,34 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.ashokit.bindings.contactForm;
-import in.ashokit.service.contactService;
+import in.ashokit.bindings.ContactForm;
+import in.ashokit.service.ContactService;
 
 @RestController
-public class contactRestController {
+public class ContactRestController {
 
 	@Autowired
-	private contactService service;
+	private ContactService service;
 
 	@PostMapping("/save")
-	public String saveContact(@RequestBody contactForm form) {
-      System.out.println("rest save ");
-   
+	public String saveContact(@RequestBody ContactForm form) {
+      
 		return service.saveContact(form);
 	}
 
 	@GetMapping("/view")
-	public List<contactForm> viewContacts() {
+	public List<ContactForm> viewContacts() {
 		return service.viewContacts();
 
 	}
 
 	@GetMapping("/edit/{contactId}")
-	public contactForm editContact(@PathVariable Integer contactId) {
+	public ContactForm editContact(@PathVariable Integer contactId) {
 		return service.editContact(contactId);
 	}
 
 	@GetMapping("/delete/{contactId}")
-	public List<contactForm> deleteContact(@PathVariable Integer contactId) {
+	public List<ContactForm> deleteContact(@PathVariable Integer contactId) {
 		return service.deleteContact(contactId);
 
 	}

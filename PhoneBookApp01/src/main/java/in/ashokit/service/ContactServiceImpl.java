@@ -8,22 +8,21 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import in.ashokit.bindings.contactForm;
+import in.ashokit.bindings.ContactForm;
 import in.ashokit.entities.Contact;
-import in.ashokit.repository.contactRepository;
+import in.ashokit.repository.ContactRepository;
 
 @Service
-public class contactServiceImpl implements contactService {
+public class ContactServiceImpl implements ContactService {
 
 	@Autowired
-	private contactRepository contactRepo;
+	private ContactRepository contactRepo;
 
 	@Override
-	public String saveContact(contactForm form) {
-		System.out.println("service save ");
+	public String saveContact(ContactForm form) {
 		Contact entity = new Contact();
 		BeanUtils.copyProperties(form, entity);
-
+        entity.setActiveSw("Yes");
 		contactRepo.save(entity);
 		if (entity.getContactId()!= null) {
 			return "Contact Inserted Successfully";
@@ -33,14 +32,14 @@ public class contactServiceImpl implements contactService {
 	}
 
 	@Override
-	public List<contactForm> viewContacts() {
-		List<contactForm> datalist = new ArrayList<>();
+	public List<ContactForm> viewContacts() {
+		List<ContactForm> datalist = new ArrayList<>();
 
 		List<Contact> find = contactRepo.findAll();
 
 		for (Contact entity : find) {
 
-			contactForm form = new contactForm();
+			ContactForm form = new ContactForm();
 			BeanUtils.copyProperties(entity, form);
 			datalist.add(form);
 
@@ -50,11 +49,11 @@ public class contactServiceImpl implements contactService {
 	}
 
 	@Override
-	public contactForm editContact(Integer contactId) {
+	public ContactForm editContact(Integer contactId) {
 		Optional<Contact> findbyId = contactRepo.findById(contactId);
 		if (findbyId.isPresent()) {
 			Contact entity = findbyId.get();
-			contactForm form = new contactForm();
+			ContactForm form = new ContactForm();
 			BeanUtils.copyProperties(entity, form);
 			return form;
 
@@ -64,7 +63,7 @@ public class contactServiceImpl implements contactService {
 	}
 
 	@Override
-	public List<contactForm> deleteContact(Integer contactId) {
+	public List<ContactForm> deleteContact(Integer contactId) {
 		contactRepo.deleteById(contactId);
 		return viewContacts();
 	}
