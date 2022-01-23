@@ -4,9 +4,11 @@ public class Success {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Success Executed Successfully");
-		// TODO Auto-generated method stub
-
+		String s1="ajay@gmail.com";
+		String s2="ajay@gmail1.com";
+		System.out.println(s1==s2);
+		
+		
 	}
 
 }
