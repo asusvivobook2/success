@@ -1,4 +1,4 @@
-package in.ashokit.entities;
+package in.ajay.entities;
 
 import java.util.Date;
 

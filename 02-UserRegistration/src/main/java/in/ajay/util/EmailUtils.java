@@ -1,4 +1,4 @@
- package in.ashokit.util;
+ package in.ajay.util;
 
 import javax.mail.internet.MimeMessage;
 

@@ -8,7 +8,7 @@
 		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>in.ajay</groupId>
 	<artifactId>02-UserRegistration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>02-UserRegistration</name>

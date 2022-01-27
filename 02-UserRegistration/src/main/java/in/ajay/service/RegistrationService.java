@@ -1,8 +1,8 @@
-package in.ashokit.service;
+package in.ajay.service;
 
 import java.util.Map;
 
-import in.ashokit.bindings.User;
+import in.ajay.bindings.User;
 
 public interface RegistrationService {
 

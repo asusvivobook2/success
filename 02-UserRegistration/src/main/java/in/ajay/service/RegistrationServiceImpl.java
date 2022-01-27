@@ -1,4 +1,4 @@
-package in.ashokit.service;
+package in.ajay.service;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,16 +13,16 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import in.ashokit.bindings.User;
-import in.ashokit.entities.CityEntity;
-import in.ashokit.entities.CountryEntity;
-import in.ashokit.entities.StateEntity;
-import in.ashokit.entities.UserEntity;
-import in.ashokit.repositories.CityRepository;
-import in.ashokit.repositories.CountryRepository;
-import in.ashokit.repositories.StateRepository;
-import in.ashokit.repositories.UserRepository;
-import in.ashokit.util.EmailUtils;
+import in.ajay.bindings.User;
+import in.ajay.entities.CityEntity;
+import in.ajay.entities.CountryEntity;
+import in.ajay.entities.StateEntity;
+import in.ajay.entities.UserEntity;
+import in.ajay.repositories.CityRepository;
+import in.ajay.repositories.CountryRepository;
+import in.ajay.repositories.StateRepository;
+import in.ajay.repositories.UserRepository;
+import in.ajay.util.EmailUtils;
 
 @Service
 public class RegistrationServiceImpl implements RegistrationService {

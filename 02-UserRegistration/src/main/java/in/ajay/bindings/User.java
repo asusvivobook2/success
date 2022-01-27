@@ -1,4 +1,4 @@
-package in.ashokit.bindings;
+package in.ajay.bindings;
 
 import java.time.LocalDate;
 import java.util.Date;

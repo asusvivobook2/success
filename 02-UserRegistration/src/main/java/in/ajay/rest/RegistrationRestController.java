@@ -1,4 +1,4 @@
-package in.ashokit.rest;
+package in.ajay.rest;
 
 import java.util.Map;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.ashokit.bindings.User;
-import in.ashokit.service.RegistrationService;
+import in.ajay.bindings.User;
+import in.ajay.service.RegistrationService;
 
 @RestController
 public class RegistrationRestController {

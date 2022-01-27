@@ -1,4 +1,4 @@
-package in.ashokit.config;
+package in.ajay.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class SwaggerConfig {
 	public Docket apiDoc(){
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("in.ashokit.rest"))
+				.apis(RequestHandlerSelectors.basePackage("in.ajay.rest"))
 				.paths(PathSelectors.any())
 				.build();
 		
