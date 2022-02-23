@@ -31,6 +31,7 @@ public class InsuranceServiceImpl implements InsuranceService {
 
 		Example<InsurancePlansEntity> example = Example.of(entity);
 		List<InsurancePlansEntity> find = repo.findAll(example);
+		System.out.println(find);
 		List<PlanResponse> res = new ArrayList<>();
 		System.out.println(res);
 		for (InsurancePlansEntity planentity : find) {
