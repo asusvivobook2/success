@@ -6,11 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
-import lombok.ToString;
 
-@Entity
 @Data
 @Table(name="INSURANCE_PLANS")
+@Entity
 public class InsurancePlansEntity {
 	
 	@Id
